@@ -19,20 +19,18 @@
 
   <main>
 
-    <!-- Artículo de introducción con figura local -->
     <article id="introduccion">
       <h2>Demostración Semántica</h2>
       <p>Este portal utiliza exclusivamente etiquetas de <mark>HTML5 semántico</mark> para su maquetación.</p>
       
       <figure>
-        <img src="photo-1517694712202-14dd9538aa97.jpg" alt="Código en pantalla de computadora" width="400">
+        <img src="img/photo-1517694712202-14dd9538aa97.jpg" alt="Código en pantalla de computadora" width="400">
         <figcaption>Figura 1: Estructuración y desarrollo web con estándares W3C.</figcaption>
       </figure>
 
       <p>Progreso de la materia: <progress value="80" max="100"></progress></p>
     </article>
 
-    <!-- Sección Multimedia con archivos locales -->
     <section id="multimedia">
       <h2>Sección Multimedia</h2>
       
@@ -48,7 +46,7 @@
 
       <h3>Video</h3>
       <figure>
-        <video controls width="480" poster="imagenes/photo-1517694712202-14dd9538aa97.jpg">
+        <video controls width="480" poster="img/photo-1517694712202-14dd9538aa97.jpg">
           <source src="video/vecteezy_programmer-hands-typing-on-laptop-with-digital-data_81590745.mp4" type="video/mp4">
           <source src="video/vecteezy_programmer-hands-typing-on-laptop-with-digital-data_81590745.webm" type="video/webm">
           Tu navegador no soporta el elemento de video.
@@ -57,42 +55,34 @@
       </figure>
     </section>
 
-    <!-- Sección Formulario con 8 tipos de entrada distintos y datalist con 5 opciones -->
     <section id="formulario">
       <h2>Formulario de Registro HTML5</h2>
       <form action="#" method="post">
         
-        <!-- 1. email -->
         <label for="campo-email">Email: 
           <input type="email" id="campo-email" name="email" placeholder="usuario@correo.com" required>
         </label><br>
 
-        <!-- 2. url -->
         <label for="campo-url">Sitio Web (URL): 
           <input type="url" id="campo-url" name="url" placeholder="https://misitio.com" required>
         </label><br>
 
-        <!-- 3. number -->
         <label for="campo-number">Calificación / Edad: 
           <input type="number" id="campo-number" name="edad" min="1" max="100" placeholder="25" required>
         </label><br>
 
-        <!-- 4. tel -->
         <label for="campo-tel">Teléfono: 
           <input type="tel" id="campo-tel" name="telefono" placeholder="555-123-4567" required>
         </label><br>
 
-        <!-- 5. date -->
         <label for="campo-date">Fecha de Nacimiento: 
           <input type="date" id="campo-date" name="fecha">
         </label><br>
 
-        <!-- 6. color -->
         <label for="campo-color">Color Preferido: 
           <input type="color" id="campo-color" name="color" value="#3498db">
         </label><br>
 
-        <!-- 7. search + datalist (con 5 opciones) -->
         <label for="campo-search">Estado u Origen (Búsqueda): 
           <input type="search" id="campo-search" name="estado" list="estados" placeholder="Buscar estado...">
           <datalist id="estados">
@@ -101,10 +91,10 @@
             <option value="Tabasco">
             <option value="Veracruz">
             <option value="Yucatán">
+            <option value="Monterrey">
           </datalist>
         </label><br>
 
-        <!-- 8. range -->
         <label for="campo-range">Nivel de Avance / Rango (1 a 100): 
           <input type="range" id="campo-range" name="rango" min="1" max="100" value="50">
         </label><br>
@@ -113,13 +103,11 @@
       </form>
     </section>
 
-    <!-- Sección Canvas (500x200 px) -->
     <section id="canvas">
       <h2>Gráfico con Canvas</h2>
       <canvas id="c" width="500" height="200" style="border:1px solid #ccc; background-color: #fff;"></canvas>
     </section>
 
-    <!-- Elemento details y summary -->
     <aside>
       <details>
         <summary>¿Qué es HTML5?</summary>
@@ -130,7 +118,7 @@
   </main>
 
   <footer>
-    <p>Elaborado por: Alejandro Sánchez — Licenciatura en Sistemas Computacionales — Práctica #4 — 
+    <p>Elaborado por: Alejandro Sánchez — Licenciatura en Sistemas Computacionales — Práctica 4 — 
     <time datetime="2026-08-31">31 de agosto de 2026</time></p>
   </footer>
 
@@ -138,16 +126,13 @@
     const c   = document.getElementById('c');
     const ctx = c.getContext('2d');
 
-    // Figura 1: Rectángulo
     ctx.fillStyle = '#C0392B';
     ctx.fillRect(20, 20, 200, 80);
 
-    // Figura 2: Texto
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 20px Arial';
     ctx.fillText('HTML5 Canvas', 35, 65);
 
-    // Figura 3: Círculo
     ctx.beginPath();
     ctx.arc(380, 100, 50, 0, Math.PI * 2);
     ctx.fillStyle = '#2980b9';
